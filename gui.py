@@ -197,7 +197,7 @@ class Ui_MainWindow(object):
         self.textEdit_10.setGeometry(QtCore.QRect(80, 40, 181, 87))
         self.textEdit_10.setObjectName("textEdit_10")
         self.table_friends = QtWidgets.QTableWidget(self.groupBox_game_8)
-        self.table_friends.setGeometry(QtCore.QRect(90, 350, 691, 491))
+        self.table_friends.setGeometry(QtCore.QRect(90, 350, 691, 451))
         self.table_friends.setFocusPolicy(QtCore.Qt.WheelFocus)
         self.table_friends.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.table_friends.setStyleSheet(".QTableWidget{    \n"
@@ -226,10 +226,81 @@ class Ui_MainWindow(object):
         self.line_find.setGeometry(QtCore.QRect(90, 220, 691, 61))
         self.line_find.setObjectName("line_find")
         self.stackedWidget.addWidget(self.Friends)
+        self.Registration = QtWidgets.QWidget()
+        self.Registration.setObjectName("Registration")
+        self.groupBox_game_9 = QtWidgets.QGroupBox(self.Registration)
+        self.groupBox_game_9.setGeometry(QtCore.QRect(520, 70, 661, 831))
+        self.groupBox_game_9.setStyleSheet("QGroupBox{\n"
+"background-color: #1E2F23;\n"
+"border: 1px solid #B39C4D;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"  background-color: #B39C4D;\n"
+"  color: #FFFFFF;\n"
+"  text-align: center;\n"
+"  font-size: 22px;\n"
+"}\n"
+"\n"
+"QLineEdit{\n"
+"color: #FFFFFF;\n"
+"background: #2A382F;\n"
+"border: 1px solid #B39C4D;\n"
+"font-size: 20px;\n"
+"}\n"
+"QTextEdit{\n"
+"color: #FFFFFF;\n"
+"background-color: #1E2F23;\n"
+"border: 0px;\n"
+"}")
+        self.groupBox_game_9.setTitle("")
+        self.groupBox_game_9.setObjectName("groupBox_game_9")
+        self.Registration_but = QtWidgets.QPushButton(self.groupBox_game_9)
+        self.Registration_but.setGeometry(QtCore.QRect(80, 610, 491, 71))
+        self.Registration_but.setObjectName("Registration_but")
+        self.line_login_2 = QtWidgets.QLineEdit(self.groupBox_game_9)
+        self.line_login_2.setGeometry(QtCore.QRect(80, 230, 491, 61))
+        self.line_login_2.setObjectName("line_login_2")
+        self.line_password_reg = QtWidgets.QLineEdit(self.groupBox_game_9)
+        self.line_password_reg.setGeometry(QtCore.QRect(80, 380, 491, 61))
+        self.line_password_reg.setStyleSheet("")
+        self.line_password_reg.setText("")
+        self.line_password_reg.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.line_password_reg.setObjectName("line_password_reg")
+        self.textEdit_11 = QtWidgets.QTextEdit(self.groupBox_game_9)
+        self.textEdit_11.setGeometry(QtCore.QRect(80, 40, 321, 87))
+        self.textEdit_11.setObjectName("textEdit_11")
+        self.textEdit_12 = QtWidgets.QTextEdit(self.groupBox_game_9)
+        self.textEdit_12.setGeometry(QtCore.QRect(80, 180, 491, 41))
+        self.textEdit_12.setObjectName("textEdit_12")
+        self.textEdit_13 = QtWidgets.QTextEdit(self.groupBox_game_9)
+        self.textEdit_13.setGeometry(QtCore.QRect(80, 330, 491, 41))
+        self.textEdit_13.setObjectName("textEdit_13")
+        self.textEdit_14 = QtWidgets.QTextEdit(self.groupBox_game_9)
+        self.textEdit_14.setGeometry(QtCore.QRect(80, 460, 491, 41))
+        self.textEdit_14.setObjectName("textEdit_14")
+        self.line_password_reg_2 = QtWidgets.QLineEdit(self.groupBox_game_9)
+        self.line_password_reg_2.setGeometry(QtCore.QRect(80, 510, 491, 61))
+        self.line_password_reg_2.setStyleSheet("")
+        self.line_password_reg_2.setText("")
+        self.line_password_reg_2.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.line_password_reg_2.setObjectName("line_password_reg_2")
+        self.login_but_wind = QtWidgets.QPushButton(self.groupBox_game_9)
+        self.login_but_wind.setGeometry(QtCore.QRect(80, 750, 71, 31))
+        self.login_but_wind.setStyleSheet("\n"
+"QPushButton {\n"
+"  background-color: #1E2F23;\n"
+"  color: #FCD655;\n"
+"  text-align: center;\n"
+"  font-size: 22px;\n"
+"border: 0px;\n"
+"}")
+        self.login_but_wind.setObjectName("login_but_wind")
+        self.stackedWidget.addWidget(self.Registration)
         self.Login = QtWidgets.QWidget()
         self.Login.setObjectName("Login")
         self.groupBox_game_4 = QtWidgets.QGroupBox(self.Login)
-        self.groupBox_game_4.setGeometry(QtCore.QRect(540, 60, 661, 831))
+        self.groupBox_game_4.setGeometry(QtCore.QRect(540, 70, 661, 721))
         self.groupBox_game_4.setStyleSheet("QGroupBox{\n"
 "background-color: #1E2F23;\n"
 "border: 1px solid #B39C4D;\n"
@@ -256,7 +327,7 @@ class Ui_MainWindow(object):
         self.groupBox_game_4.setTitle("")
         self.groupBox_game_4.setObjectName("groupBox_game_4")
         self.Login_but = QtWidgets.QPushButton(self.groupBox_game_4)
-        self.Login_but.setGeometry(QtCore.QRect(140, 590, 351, 71))
+        self.Login_but.setGeometry(QtCore.QRect(80, 490, 491, 71))
         self.Login_but.setObjectName("Login_but")
         self.line_login = QtWidgets.QLineEdit(self.groupBox_game_4)
         self.line_login.setGeometry(QtCore.QRect(80, 230, 491, 61))
@@ -276,6 +347,32 @@ class Ui_MainWindow(object):
         self.textEdit_3 = QtWidgets.QTextEdit(self.groupBox_game_4)
         self.textEdit_3.setGeometry(QtCore.QRect(80, 340, 491, 41))
         self.textEdit_3.setObjectName("textEdit_3")
+        self.registration_but_wind = QtWidgets.QPushButton(self.groupBox_game_4)
+        self.registration_but_wind.setGeometry(QtCore.QRect(70, 650, 151, 31))
+        self.registration_but_wind.setStyleSheet("\n"
+"QPushButton {\n"
+"  background-color: #1E2F23;\n"
+"  color: #FCD655;\n"
+"  text-align: center;\n"
+"  font-size: 22px;\n"
+"border: 0px;\n"
+"}")
+        self.registration_but_wind.setObjectName("registration_but_wind")
+        self.save_me = QtWidgets.QCheckBox(self.groupBox_game_4)
+        self.save_me.setGeometry(QtCore.QRect(70, 590, 181, 51))
+        self.save_me.setStyleSheet(" display: inline-block;\n"
+"  border-radius: 4px;\n"
+"background-color: #1E2F23;\n"
+"  border: none;\n"
+"  color: #FFFFFF;\n"
+"  text-align: center;\n"
+"  font-size: 20px;\n"
+"  padding: 10px;\n"
+"  width: 200px;\n"
+"  transition: all 0.5s;\n"
+"  cursor: pointer;\n"
+"  margin: 5px;")
+        self.save_me.setObjectName("save_me")
         self.stackedWidget.addWidget(self.Login)
         self.Profile = QtWidgets.QWidget()
         self.Profile.setObjectName("Profile")
@@ -353,11 +450,22 @@ class Ui_MainWindow(object):
 "  font-size: 20px;")
         self.textEdit_rating.setObjectName("textEdit_rating")
         self.textEdit_place = QtWidgets.QTextEdit(self.groupBox_game_5)
-        self.textEdit_place.setGeometry(QtCore.QRect(470, 290, 121, 41))
+        self.textEdit_place.setGeometry(QtCore.QRect(470, 290, 291, 41))
         self.textEdit_place.setStyleSheet("  color: #FCD655;\n"
 "  text-align: center;\n"
 "  font-size: 20px;")
         self.textEdit_place.setObjectName("textEdit_place")
+        self.exit = QtWidgets.QPushButton(self.groupBox_game_5)
+        self.exit.setGeometry(QtCore.QRect(30, 840, 151, 31))
+        self.exit.setStyleSheet("\n"
+"QPushButton {\n"
+"  background-color: #1E2F23;\n"
+"  color: #FCD655;\n"
+"  text-align: center;\n"
+"  font-size: 22px;\n"
+"border: 0px;\n"
+"}")
+        self.exit.setObjectName("exit")
         self.stackedWidget.addWidget(self.Profile)
         self.groupBox_main = QtWidgets.QGroupBox(self.centralwidget)
         self.groupBox_main.setGeometry(QtCore.QRect(-10, 0, 1701, 81))
@@ -384,7 +492,7 @@ class Ui_MainWindow(object):
         self.groupBox_main.setTitle("")
         self.groupBox_main.setObjectName("groupBox_main")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.groupBox_main)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(410, 0, 611, 80))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(360, 0, 431, 80))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -406,38 +514,30 @@ class Ui_MainWindow(object):
         self.education_but.setSizePolicy(sizePolicy)
         self.education_but.setObjectName("education_but")
         self.horizontalLayout.addWidget(self.education_but)
-        self.friends_but = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.friends_but.sizePolicy().hasHeightForWidth())
-        self.friends_but.setSizePolicy(sizePolicy)
-        self.friends_but.setObjectName("friends_but")
-        self.horizontalLayout.addWidget(self.friends_but)
         self.main_but = QtWidgets.QPushButton(self.groupBox_main)
         self.main_but.setGeometry(QtCore.QRect(40, 10, 211, 61))
         self.main_but.setStyleSheet("  font-size: 36px;")
         self.main_but.setObjectName("main_but")
         self.stackedWidget_2 = QtWidgets.QStackedWidget(self.groupBox_main)
-        self.stackedWidget_2.setGeometry(QtCore.QRect(1200, 0, 521, 71))
+        self.stackedWidget_2.setGeometry(QtCore.QRect(830, 0, 891, 71))
         self.stackedWidget_2.setStyleSheet("background: #1E2F23;")
         self.stackedWidget_2.setObjectName("stackedWidget_2")
         self.page_login = QtWidgets.QWidget()
         self.page_login.setObjectName("page_login")
         self.login_but = QtWidgets.QPushButton(self.page_login)
-        self.login_but.setGeometry(QtCore.QRect(90, 0, 151, 81))
+        self.login_but.setGeometry(QtCore.QRect(670, 0, 151, 81))
         self.login_but.setObjectName("login_but")
         self.stackedWidget_2.addWidget(self.page_login)
         self.page_user = QtWidgets.QWidget()
         self.page_user.setObjectName("page_user")
         self.profile_but = QtWidgets.QPushButton(self.page_user)
-        self.profile_but.setGeometry(QtCore.QRect(210, 0, 151, 81))
+        self.profile_but.setGeometry(QtCore.QRect(490, 0, 211, 81))
         self.profile_but.setStyleSheet("  color: #FCD655;\n"
 "  text-align: right;")
         self.profile_but.setText("")
         self.profile_but.setObjectName("profile_but")
         self.profile_2_but = QtWidgets.QPushButton(self.page_user)
-        self.profile_2_but.setGeometry(QtCore.QRect(390, 0, 81, 81))
+        self.profile_2_but.setGeometry(QtCore.QRect(730, 0, 81, 81))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -447,6 +547,14 @@ class Ui_MainWindow(object):
         self.profile_2_but.setText("")
         self.profile_2_but.setIconSize(QtCore.QSize(80, 80))
         self.profile_2_but.setObjectName("profile_2_but")
+        self.friends_but = QtWidgets.QPushButton(self.page_user)
+        self.friends_but.setGeometry(QtCore.QRect(0, 0, 198, 78))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.friends_but.sizePolicy().hasHeightForWidth())
+        self.friends_but.setSizePolicy(sizePolicy)
+        self.friends_but.setObjectName("friends_but")
         self.stackedWidget_2.addWidget(self.page_user)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -494,6 +602,28 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:28pt; color:#ffffff;\">Друзья</span></p></body></html>"))
+        self.Registration_but.setText(_translate("MainWindow", "РЕГИСТРАЦИЯ"))
+        self.textEdit_11.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:28pt; color:#ffffff;\">Регистрация</span></p></body></html>"))
+        self.textEdit_12.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; color:#ffffff;\">Логин</span></p></body></html>"))
+        self.textEdit_13.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; color:#ffffff;\">Пароль</span></p></body></html>"))
+        self.textEdit_14.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; color:#ffffff;\">Повторите пароль</span></p></body></html>"))
+        self.login_but_wind.setText(_translate("MainWindow", "Войти"))
         self.Login_but.setText(_translate("MainWindow", "ВОЙТИ"))
         self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -504,12 +634,14 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; color:#ffffff;\">Логин или электронная почта</span></p></body></html>"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; color:#ffffff;\">Логин</span></p></body></html>"))
         self.textEdit_3.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; color:#ffffff;\">Пароль</span></p></body></html>"))
+        self.registration_but_wind.setText(_translate("MainWindow", "Регистрация"))
+        self.save_me.setText(_translate("MainWindow", "Запомнить меня"))
         self.textEdit_4.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -540,11 +672,12 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:20px; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;\"><br /></p></body></html>"))
+        self.exit.setText(_translate("MainWindow", "Выход"))
         self.game_but.setText(_translate("MainWindow", "ИГРА"))
         self.education_but.setText(_translate("MainWindow", "ОБУЧЕНИЕ"))
-        self.friends_but.setText(_translate("MainWindow", "ДРУЗЬЯ"))
         self.main_but.setText(_translate("MainWindow", "REVERSEE"))
         self.login_but.setText(_translate("MainWindow", "ВОЙТИ"))
+        self.friends_but.setText(_translate("MainWindow", "ДРУЗЬЯ"))
 
 
 if __name__ == "__main__":

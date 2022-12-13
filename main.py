@@ -20,30 +20,32 @@ class MainWindow(QWidget):
         self.ui.setupUi(self.main_win)
         self.ui.stackedWidget.setCurrentWidget(self.ui.Main)
 
+        # Button connect
         self.ui.main_but.clicked.connect(self.main)
         self.ui.game_but.clicked.connect(self.main)
         self.ui.find_game.clicked.connect(self.game)
         self.ui.create_game.clicked.connect(self.game)
         self.ui.friends_but.clicked.connect(self.friends)
         self.ui.login_but.clicked.connect(self.login_window)
+        self.ui.login_but_wind.clicked.connect(self.login_window)
+        self.ui.registration_but_wind.clicked.connect(self.registration_window)
+        self.ui.Registration_but.clicked.connect(self.registration)
         self.ui.education_but.clicked.connect(self.education)
         self.ui.Login_but.clicked.connect(self.login)
         self.ui.profile_but.clicked.connect(self.profile)
         self.ui.profile_2_but.clicked.connect(self.profile)
+        self.ui.exit.clicked.connect(self.exit)
 
-        self.person = Profile('admin', '123', 'user.png', '2456', '1')
+        # List persons
+        self.person = None
         self.list_person=[]
-        self.person1 = Profile('FIRST', '123', 'who.png', '1999', '2')
-        self.person2 = Profile('SECOSECONDSECONDSECONDSSECONDECONDSSECONDECONDND', '123', 'who.png', '562', '3')
-        self.person3 = Profile('__ALFA__', '123', 'who.png', '0', '5')
-        self.person4 = Profile('MPDDS', '123', 'who.png', '125', '4')
+        self.list_person.append(Profile('admin', '123', 'user.png', '2456', '1'))
+        self.list_person.append(Profile('FIRST', '123', 'who.png', '1999', '2'))
+        self.list_person.append(Profile('Second', '123', 'who.png', '562', '3'))
+        self.list_person.append(Profile('__ALFA__', '123', 'who.png', '0', '5'))
+        self.list_person.append(Profile('MPDDS', '123', 'who.png', '125', '4'))
 
-        self.list_person.append(self.person1)
-        self.list_person.append(self.person2)
-        self.list_person.append(self.person3)
-        self.list_person.append(self.person4)
-
-
+        # Default board
         self.ui.board_size.setValue(8)
         self.ui.board_size.setMinimum(6)
         self.ui.board_size.setMaximum(18)
@@ -64,7 +66,6 @@ class MainWindow(QWidget):
         self.pre_turn(self.ui.gridLayout_4.itemAt(self.cols * (self.cols / 2 - 1) + (self.cols / 2)).widget(), False)
         self.pre_turn(self.ui.gridLayout_4.itemAt(self.cols * (self.cols / 2) + (self.cols / 2 - 1)).widget(), False)
         self.pre_turn(self.ui.gridLayout_4.itemAt(self.cols * (self.cols / 2) + (self.cols / 2)).widget(), True)
-
 
     def crate_board(self):
         self.counter = 0
@@ -92,17 +93,42 @@ class MainWindow(QWidget):
 
     def login(self):
         if self.ui.line_login.text() and self.ui.line_password.text():
-            if self.ui.line_login.text() == self.person.name and self.ui.line_password.text() == self.person.password:
+            for i in range(len(self.list_person)):
+                if self.ui.line_login.text() == self.list_person[i].name and self.ui.line_password.text() == self.list_person[i].password:
+                    self.person = self.list_person[i]
+                    self.ui.profile_but.setText(self.person.name)
+                    self.ui.profile_2_but.setStyleSheet(f'border-image: url({self.person.path});')
+                    self.ui.stackedWidget_2.setCurrentWidget(self.ui.page_user)
+                    self.ui.stackedWidget.setCurrentWidget(self.ui.Main)
+                    if not self.ui.save_me.checkState():
+                        self.ui.line_login.clear()
+                        self.ui.line_password.clear()
+
+                    # self.ui.textEdit_rating_2.setText(self.person.rating)
+
+    def registration_window(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Registration)
+
+    def registration(self):
+        if self.ui.line_login_2.text() and self.ui.line_password_reg.text() and self.ui.line_password_reg_2.text():
+            if self.ui.line_password_reg.text() == self.ui.line_password_reg_2.text():
+                self.person = Profile(self.ui.line_login_2.text(), self.ui.line_password_reg.text(), 'who.png', '0',
+                                      'сам как думаешь?')
+                self.list_person.append(self.person)
                 self.ui.profile_but.setText(self.person.name)
                 self.ui.profile_2_but.setStyleSheet(f'border-image: url({self.person.path});')
                 self.ui.stackedWidget_2.setCurrentWidget(self.ui.page_user)
                 self.ui.stackedWidget.setCurrentWidget(self.ui.Main)
-                # self.ui.textEdit_rating_2.setText(self.person.rating)
+
+    def exit(self):
+        self.person = None
+        self.ui.stackedWidget_2.setCurrentWidget(self.ui.page_login)
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Main)
 
     def friends(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Friends)
         self.ui.table_friends.setColumnCount(4)
-        self.ui.table_friends.setRowCount(len(self.list_person))
+        self.ui.table_friends.setRowCount(len(self.list_person)-1)
         
         self.ui.table_friends.verticalHeader().setDefaultSectionSize(110)
         self.ui.table_friends.horizontalHeader().setDefaultSectionSize(100)
@@ -111,8 +137,10 @@ class MainWindow(QWidget):
         self.ui.table_friends.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignVCenter | QtCore.Qt.AlignHCenter)
         self.ui.table_friends.alternatingRowColors()
 
-
+        index = 0
         for i in range(len(self.list_person)):
+            if self.person == self.list_person[i]:
+                continue
             btn_img = QtWidgets.QPushButton(self.ui.gridLayoutWidget)
             btn_img.setIcon(QIcon(self.list_person[i].path))
             btn_img.setIconSize(QSize(100, 100))
@@ -123,22 +151,26 @@ class MainWindow(QWidget):
             btn_invite.setText('Пригласить')
             btn_invite.setStyleSheet('.QPushButton {  background-color: #B39C4D;color: #FFFFFF; text-align: center; '
                                      'font-size: 22px;}')
-            self.ui.table_friends.setCellWidget(i, 0, btn_img)
-            self.ui.table_friends.setItem(i, 1, self.create_item(self.list_person[i].name))
-            self.ui.table_friends.setItem(i, 2, self.create_item(self.list_person[i].rating))
-            self.ui.table_friends.setCellWidget(i, 3, btn_invite)
-
+            self.ui.table_friends.setCellWidget(index, 0, btn_img)
+            self.ui.table_friends.setItem(index, 1, self.create_item(self.list_person[i].name))
+            self.ui.table_friends.setItem(index, 2, self.create_item(self.list_person[i].rating))
+            self.ui.table_friends.setCellWidget(index, 3, btn_invite)
             self.ui.table_friends.resizeColumnsToContents()
-    def create_item(self, string ):
+            index += 1
+
+    def create_item(self, string):
         item = QtWidgets.QTableWidgetItem(string)
         item.setTextAlignment(QtCore.Qt.AlignCenter)
+        item.setFlags(QtCore.Qt.ItemIsEnabled)
         return item
+
     def profile(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Profile)
         self.ui.user_img.setStyleSheet(f'border-image: url({self.person.path});')
         self.ui.textEdit_rating.setText(self.person.rating)
         self.ui.textEdit_place.setText(self.person.place)
         self.ui.user_nick.setText(self.person.name)
+        self.ui.exit.setVisible(True)
 
     def profile_users(self, user):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Profile)
@@ -146,6 +178,8 @@ class MainWindow(QWidget):
         self.ui.textEdit_rating.setText(user.rating)
         self.ui.textEdit_place.setText(user.place)
         self.ui.user_nick.setText(user.name)
+        self.ui.exit.setVisible(False)
+
     def education(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Education)
 
