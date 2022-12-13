@@ -166,6 +166,66 @@ class Ui_MainWindow(object):
         self.textEdit_7.setGeometry(QtCore.QRect(80, 40, 971, 711))
         self.textEdit_7.setObjectName("textEdit_7")
         self.stackedWidget.addWidget(self.Education)
+        self.Friends = QtWidgets.QWidget()
+        self.Friends.setObjectName("Friends")
+        self.groupBox_game_8 = QtWidgets.QGroupBox(self.Friends)
+        self.groupBox_game_8.setGeometry(QtCore.QRect(400, 50, 861, 911))
+        self.groupBox_game_8.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.groupBox_game_8.setStyleSheet("QGroupBox{\n"
+"background-color: #1E2F23;\n"
+"border: 1px solid #B39C4D;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"  background-color: #B39C4D;\n"
+"  color: #FFFFFF;\n"
+"  text-align: center;\n"
+"  font-size: 22px;\n"
+"}\n"
+"\n"
+"QLineEdit{\n"
+"background: #2A382F;\n"
+"border: 1px solid #B39C4D;\n"
+"}\n"
+"QTextEdit{\n"
+"background-color: #1E2F23;\n"
+"border: 0px\n"
+"}")
+        self.groupBox_game_8.setTitle("")
+        self.groupBox_game_8.setObjectName("groupBox_game_8")
+        self.textEdit_10 = QtWidgets.QTextEdit(self.groupBox_game_8)
+        self.textEdit_10.setGeometry(QtCore.QRect(80, 40, 181, 87))
+        self.textEdit_10.setObjectName("textEdit_10")
+        self.table_friends = QtWidgets.QTableWidget(self.groupBox_game_8)
+        self.table_friends.setGeometry(QtCore.QRect(90, 350, 691, 491))
+        self.table_friends.setFocusPolicy(QtCore.Qt.WheelFocus)
+        self.table_friends.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.table_friends.setStyleSheet(".QTableWidget{    \n"
+"display: inline-block;\n"
+"background-color: #2A382F;\n"
+"border: 1px solid #B39C4D;\n"
+"  color: #FFFFFF;\n"
+"  text-align: center;\n"
+"  font-size: 24px;\n"
+"}\n"
+"")
+        self.table_friends.setAlternatingRowColors(False)
+        self.table_friends.setRowCount(0)
+        self.table_friends.setColumnCount(0)
+        self.table_friends.setObjectName("table_friends")
+        self.table_friends.horizontalHeader().setVisible(False)
+        self.table_friends.horizontalHeader().setCascadingSectionResizes(False)
+        self.table_friends.horizontalHeader().setHighlightSections(False)
+        self.table_friends.horizontalHeader().setSortIndicatorShown(False)
+        self.table_friends.horizontalHeader().setStretchLastSection(False)
+        self.table_friends.verticalHeader().setVisible(False)
+        self.table_friends.verticalHeader().setHighlightSections(False)
+        self.table_friends.verticalHeader().setSortIndicatorShown(False)
+        self.table_friends.verticalHeader().setStretchLastSection(False)
+        self.line_find = QtWidgets.QLineEdit(self.groupBox_game_8)
+        self.line_find.setGeometry(QtCore.QRect(90, 220, 691, 61))
+        self.line_find.setObjectName("line_find")
+        self.stackedWidget.addWidget(self.Friends)
         self.Login = QtWidgets.QWidget()
         self.Login.setObjectName("Login")
         self.groupBox_game_4 = QtWidgets.QGroupBox(self.Login)
@@ -278,6 +338,7 @@ class Ui_MainWindow(object):
         self.groupBox_game_6.setObjectName("groupBox_game_6")
         self.user_img = QtWidgets.QLineEdit(self.groupBox_game_5)
         self.user_img.setGeometry(QtCore.QRect(80, 140, 200, 200))
+        self.user_img.setStyleSheet("")
         self.user_img.setObjectName("user_img")
         self.user_nick = QtWidgets.QTextEdit(self.groupBox_game_5)
         self.user_nick.setGeometry(QtCore.QRect(350, 150, 261, 61))
@@ -428,6 +489,11 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22pt; color:#ffffff;\">Конец игры</span><span style=\" font-size:24pt; color:#ffffff;\"> </span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; color:#ffffff;\">Игра заканчивается, когда на доске оказываются все 64 фишки или, когда ни один из игроков неможет сделать ход так, чтобы прилегать к фишке соперника. Побеждает игрок с наибольшим количеством фишек своего цвета. В случае равного количествафишек, побеждает игрок, начавший игру вторым.</span></p></body></html>"))
+        self.textEdit_10.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:28pt; color:#ffffff;\">Друзья</span></p></body></html>"))
         self.Login_but.setText(_translate("MainWindow", "ВОЙТИ"))
         self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
