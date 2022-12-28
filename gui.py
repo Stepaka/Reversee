@@ -359,7 +359,7 @@ class Ui_MainWindow(object):
 "}")
         self.registration_but_wind.setObjectName("registration_but_wind")
         self.save_me = QtWidgets.QCheckBox(self.groupBox_game_4)
-        self.save_me.setGeometry(QtCore.QRect(70, 590, 181, 51))
+        self.save_me.setGeometry(QtCore.QRect(70, 590, 231, 51))
         self.save_me.setStyleSheet(" display: inline-block;\n"
 "  border-radius: 4px;\n"
 "background-color: #1E2F23;\n"

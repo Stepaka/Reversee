@@ -62,11 +62,11 @@ class MainWindow(QWidget):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Game)
         self.crate_board()
 
-        self.pre_turn(self.ui.gridLayout_4.itemAt(self.cols * (self.cols / 2 - 1) + (self.cols / 2 - 1)).widget(), True)
-        self.pre_turn(self.ui.gridLayout_4.itemAt(self.cols * (self.cols / 2 - 1) + (self.cols / 2)).widget(), False)
-        self.pre_turn(self.ui.gridLayout_4.itemAt(self.cols * (self.cols / 2) + (self.cols / 2 - 1)).widget(), False)
-        self.pre_turn(self.ui.gridLayout_4.itemAt(self.cols * (self.cols / 2) + (self.cols / 2)).widget(), True)
-
+        self.pre_turn(self.ui.gridLayout_4.itemAt(int(self.cols * (self.cols / 2 - 1) + (self.cols / 2 - 1))).widget(), True)
+        self.pre_turn(self.ui.gridLayout_4.itemAt(int(self.cols * (self.cols / 2 - 1) + (self.cols / 2))).widget(), False)
+        self.pre_turn(self.ui.gridLayout_4.itemAt(int(self.cols * (self.cols / 2) + (self.cols / 2 - 1))).widget(), False)
+        self.pre_turn(self.ui.gridLayout_4.itemAt(int(self.cols * (self.cols / 2) + (self.cols / 2))).widget(), True)
+        print(int(self.cols * (self.cols / 2 - 1) + (self.cols / 2 - 1)))
     def crate_board(self):
         self.counter = 0
         self.cols = int(self.ui.board_size.text())
@@ -197,7 +197,7 @@ class MainWindow(QWidget):
             but.setStyleSheet('.QPushButton {border-image: url(w.png);}')
         else:
             but.setStyleSheet('.QPushButton {border-image: url(b.png);}')
-
+        but.setEnabled(False)
 
         # print(self.ui.gridLayout_4.itemAt(id).widget())
 
@@ -207,3 +207,4 @@ if __name__ == "__main__":
     main_min = MainWindow()
     main_min.show()
     sys.exit(app.exec_())
+
